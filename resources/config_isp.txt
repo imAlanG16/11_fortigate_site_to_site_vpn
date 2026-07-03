@@ -1,0 +1,29 @@
+! Configuración del Router ISP (Tránsito Público)
+! Estudiante: Alan Daniel Garcia Mendez (2025-1403)
+! Asignatura: Seguridad de Redes (TSI-203)
+!
+
+enable
+configure terminal
+
+! Configuración del hostname
+hostname ISP
+
+! Configuración de interfaces WAN
+interface Ethernet0/0
+ description Enlace hacia FortiGate Oeste (F-Oeste port1)
+ ip address 1.1.1.1 255.255.255.252
+ no shutdown
+exit
+
+interface Ethernet0/1
+ description Enlace hacia FortiGate Este (F-Este port1)
+ ip address 2.2.2.1 255.255.255.252
+ no shutdown
+exit
+
+! Habilitar enrutamiento IP básico
+ip routing
+
+end
+write memory
