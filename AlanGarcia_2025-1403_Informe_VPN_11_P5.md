@@ -42,7 +42,8 @@ img, table, pre, p, li, tr, blockquote, figure, div[style*="text-align: center"]
 <strong>Asignatura:</strong> Seguridad de Redes (TSI-203)<br>
 <strong>Docente:</strong> Jonathan Esteban Rondon Corniel<br>
 <strong>Fecha de Entrega:</strong> 3 de julio de 2026<br>
-<strong>Video de Exposición:</strong> <a href="https://youtu.be/PnpUsolDV4E">https://youtu.be/PnpUsolDV4E</a>
+<strong>Video de Exposición:</strong> <a href="https://youtu.be/PnpUsolDV4E">https://youtu.be/PnpUsolDV4E</a><br>
+<strong>Repositorio de GitHub:</strong> <a href="https://github.com/imAlanG16/11_fortigate_site_to_site_vpn">https://github.com/imAlanG16/11_fortigate_site_to_site_vpn</a>
 </div>
 </div>
 

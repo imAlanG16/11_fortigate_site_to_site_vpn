@@ -12,9 +12,12 @@
 <strong>Asignatura:</strong> Seguridad de Redes (TSI-203)<br>
 <strong>Docente:</strong> Jonathan Esteban Rondon Corniel<br>
 <strong>Fecha de Entrega:</strong> 3 de julio de 2026<br>
-<strong>Video de Exposición:</strong> <a href="https://youtu.be/PnpUsolDV4E">https://youtu.be/PnpUsolDV4E</a>
+<strong>Video de Exposición:</strong> <a href="https://youtu.be/PnpUsolDV4E">https://youtu.be/PnpUsolDV4E</a><br>
+<strong>Repositorio de GitHub:</strong> <a href="https://github.com/imAlanG16/11_fortigate_site_to_site_vpn">https://github.com/imAlanG16/11_fortigate_site_to_site_vpn</a>
+</div>
+</div>
 
-<div style="page-break-after: always; break-after: page; display: block; height: 1px; overflow: hidden;">
+<div style="page-break-after: always; break-after: page; display: block; height: 1px; overflow: hidden;"></div>
 
 ## Objetivo de la VPN
 
@@ -29,6 +32,7 @@ La topología simulada consta de un router central de tránsito público (`ISP`)
 <div style="text-align: center; margin: 10px 0;">
   <img src="images/topologia_fortigate_s2s.png" width="600" alt="Topología de Red VPN Site-to-Site FortiGate">
   <p style="font-size: 0.9em; color: #666; font-style: italic;">Esquema de topología de red física e interfaces implementado en GNS3</p>
+</div>
 
 El direccionamiento de la red está diseñado a partir de los parámetros de matrícula (`2025-1403`), distribuyendo las direcciones IP y subredes como se detalla en la siguiente tabla:
 
@@ -61,7 +65,7 @@ La configuración del túnel IPsec de sitio a sitio utiliza parámetros criptogr
 | **Selectores de Tráfico (Oeste)** | N/A | Local: `14.3.10.0/24`, Remoto: `14.3.20.0/24` |
 | **Selectores de Tráfico (Este)** | N/A | Local: `14.3.20.0/24`, Remoto: `14.3.10.0/24` |
 
-<div style="page-break-after: always; break-after: page; display: block; height: 1px; overflow: hidden;">
+<div style="page-break-after: always; break-after: page; display: block; height: 1px; overflow: hidden;"></div>
 
 ## Configuración del Enrutador ISP (Tránsito Público)
 
@@ -83,7 +87,7 @@ ISP(config-if)# no shutdown
 ISP(config-if)# exit
 ```
 
-<div style="page-break-after: always; break-after: page; display: block; height: 1px; overflow: hidden;">
+<div style="page-break-after: always; break-after: page; display: block; height: 1px; overflow: hidden;"></div>
 
 ## Guía de Configuración Paso a Paso a través de la Interfaz Web (GUI)
 
@@ -112,12 +116,14 @@ Antes de iniciar la creación del túnel, es necesario definir las direcciones I
 <div style="text-align: center; margin: 10px 0;">
   <img src="images/01_interfaces_oeste.png" width="600" alt="Resumen de Interfaces F-Oeste">
   <p style="font-size: 0.9em; color: #666; font-style: italic;">Estado de configuración de interfaces en la interfaz web de FortiGate Oeste</p>
+</div>
 
 <div style="text-align: center; margin: 10px 0;">
   <img src="images/02_interfaz_lan_oeste.png" width="450" alt="Edición Interfaz LAN Oeste">
   <p style="font-size: 0.9em; color: #666; font-style: italic;">Configuración manual de direccionamiento y servidor DHCP en LAN Oeste</p>
+</div>
 
-<div style="page-break-after: always; break-after: page; display: block; height: 1px; overflow: hidden;">
+<div style="page-break-after: always; break-after: page; display: block; height: 1px; overflow: hidden;"></div>
 
 * **En FortiGate Este (F-Este):**
   1. Vaya a **Network** > **Interfaces**. Seleccione la lista física de interfaces.
@@ -138,12 +144,14 @@ Antes de iniciar la creación del túnel, es necesario definir las direcciones I
 <div style="text-align: center; margin: 10px 0;">
   <img src="images/06_interfaces_este.png" width="600" alt="Resumen de Interfaces F-Este">
   <p style="font-size: 0.9em; color: #666; font-style: italic;">Estado de configuración de interfaces en la interfaz web de FortiGate Este</p>
+</div>
 
 <div style="text-align: center; margin: 10px 0;">
   <img src="images/07_interfaz_lan_este.png" width="450" alt="Edición Interfaz LAN Este">
   <p style="font-size: 0.9em; color: #666; font-style: italic;">Configuración manual de direccionamiento y servidor DHCP en LAN Este</p>
+</div>
 
-<div style="page-break-after: always; break-after: page; display: block; height: 1px; overflow: hidden;">
+<div style="page-break-after: always; break-after: page; display: block; height: 1px; overflow: hidden;"></div>
 
 ### 2. Configuración del Enrutamiento y Rutas Estáticas
 
@@ -165,6 +173,7 @@ Para que el firewall reenvíe el tráfico saliente general e interconecte las su
 <div style="text-align: center; margin: 10px 0;">
   <img src="images/03_rutas_estaticas_oeste.png" width="600" alt="Rutas Estáticas FortiGate Oeste">
   <p style="font-size: 0.9em; color: #666; font-style: italic;">Tabla de rutas IPv4 configuradas en FortiGate Oeste</p>
+</div>
 
 * **En FortiGate Este (F-Este):**
   1. Ruta por defecto para internet:
@@ -181,8 +190,9 @@ Para que el firewall reenvíe el tráfico saliente general e interconecte las su
 <div style="text-align: center; margin: 10px 0;">
   <img src="images/08_rutas_estaticas_este.png" width="600" alt="Rutas Estáticas FortiGate Este">
   <p style="font-size: 0.9em; color: #666; font-style: italic;">Tabla de rutas IPv4 configuradas en FortiGate Este</p>
+</div>
 
-<div style="page-break-after: always; break-after: page; display: block; height: 1px; overflow: hidden;">
+<div style="page-break-after: always; break-after: page; display: block; height: 1px; overflow: hidden;"></div>
 
 ### 3. Creación del Túnel VPN usando VPN Wizard
 
@@ -202,12 +212,14 @@ Al examinar la configuración detallada del túnel generado en **VPN** > **IPsec
 <div style="text-align: center; margin: 10px 0;">
   <img src="images/04_tunel_vpn_oeste.png" width="480" alt="Parámetros del Túnel VPN F-Oeste">
   <p style="font-size: 0.9em; color: #666; font-style: italic;">Detalles de la configuración del túnel IPsec en FortiGate Oeste</p>
+</div>
 
 <div style="text-align: center; margin: 10px 0;">
   <img src="images/09_tunel_vpn_este.png" width="480" alt="Parámetros del Túnel VPN F-Este">
   <p style="font-size: 0.9em; color: #666; font-style: italic;">Detalles de la configuración del túnel IPsec en FortiGate Este</p>
+</div>
 
-<div style="page-break-after: always; break-after: page; display: block; height: 1px; overflow: hidden;">
+<div style="page-break-after: always; break-after: page; display: block; height: 1px; overflow: hidden;"></div>
 
 ## Verificación y Pruebas de Funcionamiento
 
@@ -222,12 +234,14 @@ Las pruebas de verificación permiten corroborar la correcta negociación del t�
 <div style="text-align: center; margin: 10px 0;">
   <img src="images/05_ipsec_monitor_oeste.png" width="600" alt="IPsec Monitor FortiGate Oeste">
   <p style="font-size: 0.9em; color: #666; font-style: italic;">Estado activo (Up) del túnel y tráfico cursado en el IPsec Monitor de FortiGate Oeste</p>
+</div>
 
 <div style="text-align: center; margin: 10px 0;">
   <img src="images/10_ipsec_monitor_este.png" width="600" alt="IPsec Monitor FortiGate Este">
   <p style="font-size: 0.9em; color: #666; font-style: italic;">Estado activo (Up) del túnel y tráfico cursado en el IPsec Monitor de FortiGate Este</p>
+</div>
 
-<div style="page-break-after: always; break-after: page; display: block; height: 1px; overflow: hidden;">
+<div style="page-break-after: always; break-after: page; display: block; height: 1px; overflow: hidden;"></div>
 
 ### 2. Prueba de Conectividad y Trazado de Ruta (Ping & Traceroute)
 
@@ -258,5 +272,6 @@ Para validar la conectividad de extremo a extremo y comprobar el flujo del tráf
 <div style="text-align: center; margin: 10px 0;">
   <img src="images/11_ping_traceroute.png" width="550" alt="Evidencia de Ping y Traceroute entre VPCs">
   <p style="font-size: 0.9em; color: #666; font-style: italic;">Evidencia de conectividad exitosa y trazado de ruta a través de la VPN IPsec</p>
+</div>
 
 > **Consejo de validación:** Debido a que las VPNs de FortiGate negocian e inician la conexión de forma automática al recibir tráfico interesante, el primer paquete del ping puede perderse momentáneamente durante la negociación ISAKMP/IPsec. Las siguientes solicitudes deben responder con total normalidad. El mensaje *Destination port unreachable* al final del traceroute en VPCS es el comportamiento normal de este host virtual al recibir la respuesta ICMP de finalización de ruta.
